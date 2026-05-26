@@ -3,20 +3,27 @@ class Plant:
     _height: int  # in cm
     _age: int  # in days
 
-    def __init__(self, name: str, height: int, age: int):
-        self._name = name
-        self._height = height
-        self._age = age
-
     def show(self):
         day_s = "days" if self._age > 1 else "day"
         print(f"{self._name}: {self._height}cm, {self._age} {day_s} old")
 
 
 def main():
-    rose = Plant("Rose", 25, 30)
-    sunflower = Plant("Sunflower", 80, 45)
-    cactus = Plant("Cactus", 15, 120)
+    rose = Plant()
+    rose._name = "Rose"
+    rose._height = 25
+    rose._age = 30
+
+    sunflower = Plant()
+    sunflower._name = "Sunflower"
+    sunflower._height = 80
+    sunflower._age = 45
+
+    cactus = Plant()
+    cactus._name = "Cactus"
+    cactus._height = 15
+    cactus._age = 120
+
     print("=== Garden Plant Registry ===")
     rose.show()
     sunflower.show()

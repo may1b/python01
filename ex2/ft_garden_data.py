@@ -3,11 +3,6 @@ class Plant:
     _height: float  # in cm
     _age: int  # in days
 
-    def __init__(self, name: str, height: float, age: int):
-        self._name = name
-        self._height = height
-        self._age = age
-
     def show(self):
         day_s = "days" if self._age > 1 else "day"
         print(f"{self._name}: {round(self._height, 1)}cm,\
@@ -26,7 +21,11 @@ class Plant:
 
 def main():
     starting_height = 25.0
-    rose = Plant("Rose", starting_height, 30)
+    rose = Plant()
+    rose._name = "Rose"
+    rose._height = starting_height
+    rose._age = 30
+
     print("=== Garden Plant Growth ===")
 
     day = 1
