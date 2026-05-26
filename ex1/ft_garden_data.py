@@ -1,16 +1,16 @@
 class Plant:
-    name: str
-    height: int  # in cm
-    age: int  # in days
+    _name: str
+    _height: int  # in cm
+    _age: int  # in days
 
     def __init__(self, name: str, height: int, age: int):
-        self.name = name
-        self.height = height
-        self.age = age
+        self._name = name
+        self._height = height
+        self._age = age
 
     def show(self):
-        day_s = "days" if self.age > 1 else "day"
-        print(f"{self.name}: {self.height}cm, {self.age} {day_s} old")
+        day_s = "days" if self._age > 1 else "day"
+        print(f"{self._name}: {self._height}cm, {self._age} {day_s} old")
 
 
 def main():
