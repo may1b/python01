@@ -3,12 +3,12 @@ class Plant:
     _height: int  # in cm
     _age: int  # in days
 
-    def show(self):
+    def show(self) -> None:
         day_s = "days" if self._age > 1 else "day"
         print(f"{self._name}: {self._height}cm, {self._age} {day_s} old")
 
 
-def main():
+def main() -> None:
     rose = Plant()
     rose._name = "Rose"
     rose._height = 25

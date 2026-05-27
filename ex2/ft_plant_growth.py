@@ -3,23 +3,23 @@ class Plant:
     _height: float  # in cm
     _age: int  # in days
 
-    def show(self):
+    def show(self) -> None:
         day_s = "days" if self._age > 1 else "day"
         print(f"{self._name}: {round(self._height, 1)}cm,\
  {self._age} {day_s} old")
 
-    def grow(self):
+    def grow(self) -> None:
         self._height += 0.8
 
-    def age(self):
+    def age(self) -> None:
         self._age += 1
 
-    def age_and_grow(self):
+    def age_and_grow(self) -> None:
         self.grow()
         self.age()
 
 
-def main():
+def main() -> None:
     starting_height = 25.0
     rose = Plant()
     rose._name = "Rose"
